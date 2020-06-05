@@ -9,5 +9,7 @@ export const useInput = (initialValue) => {
             [event.target.name]: event.target.value
         });
     };
-    return[values, handleChanges];
+
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    return[values, handleChanges, showSuccessMessage, setShowSuccessMessage];
 }
